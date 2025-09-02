@@ -10,13 +10,15 @@ export const styles = StyleSheet.create({
     text: {
         color: '#fff',
         fontSize: 36,
+        
     },
     input: {
         backgroundColor: "#1f1e25",
         borderRadius: 8,
         height: 56,
         marginTop: 30,
-        flex: 1
+        flex: 1,
+        paddingLeft: 10
     },  
     buttonText: {
         color: "fff",

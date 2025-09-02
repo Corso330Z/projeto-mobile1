@@ -6,14 +6,16 @@ export const styles = StyleSheet.create({
         width: "100%",
         borderRadius: 8,
         flexDirection: "row",
-        alignItems: "center"
+        alignItems: "center",
+        marginTop: 10
     },
     text: {
         color: '#fff',
-        flex: 1
+        flex: 1,
+        marginLeft: 10
     },
     buttoText: {
-        color: "#fff"
+        color: "#fff",
     },
     button: {
         backgroundColor:"#e23c44",

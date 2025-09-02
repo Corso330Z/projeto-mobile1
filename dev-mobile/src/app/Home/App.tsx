@@ -12,6 +12,11 @@ export default function App() {
                 <Text style={styles.buttonText}>+</Text>
             </TouchableOpacity>
             </View>
+            {/* Esse name é a propriedade que nós criamos para poder dar nome ao evento, mas precisamos chamar ela lá em Event */}
+            <Event name = "Evento Novo"/>
+            <Event name = "Evento Cancelado"/>
+            {/* <Event/> - Caso você chame o event sem usar a propriedade que definimos, vai dar erro falando que não está sendo usada*/}
         </View>
+        
     )
 }
