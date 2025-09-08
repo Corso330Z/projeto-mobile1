@@ -1,21 +1,25 @@
 import { Alert, Button, StyleSheet, Text, TextInput, Touchable, TouchableOpacity, View } from 'react-native';
+import AntDesign from '@expo/vector-icons/AntDesign';
 import { styles } from "./styles";
-import {Event} from "../../components/Event"
+import {Item} from "../../components/Event"
 
 export default function App() {
     return (
         <View style={styles.container}>
-            <Text style={styles.text}>Nome Evento</Text>
-            <View style={styles.form}>
-            <TextInput style={styles.input} placeholder='Digite o evento' placeholderTextColor={'#fff'}></TextInput>
-            <TouchableOpacity  style={styles.button} onPress={()=>{Alert.alert("Teste Botão")}}>
-                <Text style={styles.buttonText}>+</Text>
-            </TouchableOpacity>
+            <Text style={styles.text}>Lista de Compras</Text>
+            <View style={styles.Conteudo}>
+                <View style={styles.form}>
+                <TextInput style={styles.input} placeholder='Digite o item' placeholderTextColor={'#fff'}></TextInput>
+                <TouchableOpacity  style={styles.button} onPress={()=>{Alert.alert("Teste Botão")}}>
+                <AntDesign name="pluscircleo" size={24} color="black" />
+                </TouchableOpacity>
+                </View>
+                <View style={styles.borda}>
+                    <Item name = "Maçã"/>
+                    <Item name = "Banana"/>
+                    <Item name = "Caqui"/>
+                </View>
             </View>
-            {/* Esse name é a propriedade que nós criamos para poder dar nome ao evento, mas precisamos chamar ela lá em Event */}
-            <Event name = "Evento Novo"/>
-            <Event name = "Evento Cancelado"/>
-            {/* <Event/> - Caso você chame o event sem usar a propriedade que definimos, vai dar erro falando que não está sendo usada*/}
         </View>
         
     )
