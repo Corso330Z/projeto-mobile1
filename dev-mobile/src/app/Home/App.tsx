@@ -18,24 +18,6 @@ export default function App() {
                     <Item name = "Maçã"/>
                     <Item name = "Banana"/>
                     <Item name = "Caqui"/>
-                    <Item name = "Caqui"/>
-                    <Item name = "Caqui"/>
-                    <Item name = "Caqui"/>
-                    <Item name = "Caqui"/>
-                    <Item name = "Caqui"/>
-                    <Item name = "Caqui"/>
-                    <Item name = "Caqui"/>
-                    <Item name = "Caqui"/>
-                    <Item name = "Caqui"/>
-                    <Item name = "Caqui"/>
-                    <Item name = "Caqui"/>
-                    <Item name = "Caqui"/>
-                    <Item name = "Caqui"/>
-                    <Item name = "Caqui"/>
-                    <Item name = "Caqui"/>
-                    <Item name = "Caqui"/>
-                    <Item name = "Caqui"/>
-                    <Item name = "Caqui"/>
                 </ScrollView>
             </View>
         </View>
