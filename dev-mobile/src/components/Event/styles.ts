@@ -5,8 +5,9 @@ export const styles = StyleSheet.create({
         width: "90%",
         borderRadius: 8,
         flexDirection: "row",
+        alignSelf: "center",
         alignItems: "center",
-        marginTop: 10,
+        marginTop: 15,
         borderEndColor: "#fff",
         borderBottomWidth: 1,
         borderBottomColor: "#fff" 
@@ -14,6 +15,7 @@ export const styles = StyleSheet.create({
     text: {
         color: '#fff',
         flex: 1,
-        marginLeft: 10
+        marginLeft: 10,
+        fontSize: 18
     },
 })

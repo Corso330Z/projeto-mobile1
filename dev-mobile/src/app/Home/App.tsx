@@ -1,4 +1,4 @@
-import { Alert, Button, StyleSheet, Text, TextInput, Touchable, TouchableOpacity, View } from 'react-native';
+import { Alert, Button, ScrollView, StyleSheet, Text, TextInput, Touchable, TouchableOpacity, View } from 'react-native';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import { styles } from "./styles";
 import {Item} from "../../components/Event"
@@ -14,11 +14,29 @@ export default function App() {
                 <AntDesign name="pluscircleo" size={24} color="black" />
                 </TouchableOpacity>
                 </View>
-                <View style={styles.borda}>
+                <ScrollView style={styles.borda}>
                     <Item name = "Maçã"/>
                     <Item name = "Banana"/>
                     <Item name = "Caqui"/>
-                </View>
+                    <Item name = "Caqui"/>
+                    <Item name = "Caqui"/>
+                    <Item name = "Caqui"/>
+                    <Item name = "Caqui"/>
+                    <Item name = "Caqui"/>
+                    <Item name = "Caqui"/>
+                    <Item name = "Caqui"/>
+                    <Item name = "Caqui"/>
+                    <Item name = "Caqui"/>
+                    <Item name = "Caqui"/>
+                    <Item name = "Caqui"/>
+                    <Item name = "Caqui"/>
+                    <Item name = "Caqui"/>
+                    <Item name = "Caqui"/>
+                    <Item name = "Caqui"/>
+                    <Item name = "Caqui"/>
+                    <Item name = "Caqui"/>
+                    <Item name = "Caqui"/>
+                </ScrollView>
             </View>
         </View>
         

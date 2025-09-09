@@ -45,7 +45,7 @@ export const styles = StyleSheet.create({
         marginTop: 20,
         height: "82.5%",
         borderRadius: 15,
-        alignItems: "center"
+        overflow: "scroll"
     },
     Conteudo: {
         alignItems: "center",
