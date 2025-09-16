@@ -1,26 +1,37 @@
-import { Alert, Button, ScrollView, StyleSheet, Text, TextInput, Touchable, TouchableOpacity, View } from 'react-native';
-import AntDesign from '@expo/vector-icons/AntDesign';
+import { ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { useState } from 'react';
 import { styles } from "./styles";
-import {Item} from "../../components/Event"
+import { Input } from "../../components/Input"
+import { Itens } from "../../components/Itens"
 
 export default function App() {
+    const [list, setList] = useState<string[]>([])
+    const [listName, setListName] = useState('')
+
+    function handleAdd(){
+        setList(prevState => [...prevState, listName])
+        setListName("")
+    }
+
     return (
         <View style={styles.container}>
-            <Text style={styles.text}>Lista de Compras</Text>
-            <View style={styles.Conteudo}>
-                <View style={styles.form}>
-                <TextInput style={styles.input} placeholder='Digite o item' placeholderTextColor={'#fff'}></TextInput>
-                <TouchableOpacity  style={styles.button} onPress={()=>{Alert.alert("Teste Botão")}}>
-                <AntDesign name="pluscircleo" size={24} color="black" />
-                </TouchableOpacity>
-                </View>
-                <ScrollView style={styles.borda}>
-                    <Item name = "Maçã"/>
-                    <Item name = "Banana"/>
-                    <Item name = "Caqui"/>
-                </ScrollView>
+            <Text style={styles.text}>Lista de compras</Text>
+            <Input placeH="Digite o produto"
+            onChangeText={e => setListName(e)}
+            onPress={handleAdd}
+            value={listName}
+            />
+            <View style={styles.area}>
+            <ScrollView>
+                {
+                    list.map(item=>(
+                        <Itens
+                        key={item}
+                        name={item}/>
+                    ))
+                }
+            </ScrollView>
             </View>
         </View>
-        
     )
 }
