@@ -12,7 +12,7 @@ type Props = {
 export function Item({name}:Props){
     return(
         <View style={styles.container}>
-            <AntDesign name="checkcircle" size={18} color="#1f1e25" />
+            <AntDesign name="check-circle" size={18} color="#1f1e25" />
             <Text style={styles.text}>{name}</Text> 
         </View>
     )
