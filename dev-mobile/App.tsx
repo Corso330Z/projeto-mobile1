@@ -7,41 +7,41 @@ import AntDesign from "@expo/vector-icons/AntDesign";
 
 type Produto = {
   nome: string;
-  preco: number;
+  caloria: number;
 };
 
 export default function App() {
   const [produtos, setProdutos] = useState<Produto[]>([]);
   const [produtoAdd, setProdutoAdd] = useState("");
-  const [precoAdd, setPrecoAdd] = useState("");
+  const [caloriasAdd, setCaloriasAdd] = useState("");
 
   function adicionarProduto() {
-    if (produtoAdd.trim() === "" || precoAdd.trim() === "") {
+    if (produtoAdd.trim() === "" || caloriasAdd.trim() === "") {
       Alert.alert("Erro", "Preencha todos os campos!");
       return;
     }
 
-    const precoNumero = parseFloat(precoAdd.replace(",", "."));
-    if (isNaN(precoNumero)) {
+    const caloriaNumero = parseFloat(caloriasAdd.replace(",", "."));
+    if (isNaN(caloriaNumero)) {
       Alert.alert("Erro", "Digite um valor numérico válido para o preço!");
       return;
     }
 
     const novoProduto: Produto = {
       nome: produtoAdd,
-      preco: precoNumero,
+      caloria: caloriaNumero,
     };
 
     setProdutos([...produtos, novoProduto]);
     setProdutoAdd("");
-    setPrecoAdd("");
+    setCaloriasAdd("");
   }
 
   function apagarItem(chave: number) {
     setProdutos(produtos.filter((_, index) => index !== chave));
   }
 
-  const total = produtos.reduce((acc, item) => acc + item.preco, 0);
+  const total = produtos.reduce((acc, item) => acc + item.caloria, 0);
 
   return (
     <View style={styles.container}>
@@ -56,9 +56,9 @@ export default function App() {
           style={{ flex: 2 }}
         />
         <Input
-          placeH="Preço"
-          onChangeText={setPrecoAdd}
-          value={precoAdd}
+          placeH="Calorias"
+          onChangeText={setCaloriasAdd}
+          value={caloriasAdd}
           keyboardType="numeric"
           style={{ flex: 1 }}
         />
@@ -87,7 +87,7 @@ export default function App() {
               <Itens
                 key={index}
                 chave={index}
-                name={`${item.nome} - R$ ${item.preco.toFixed(2)}`}
+                name={`${item.nome} - ${item.caloria} KCal`}
                 onDelete={apagarItem}
               />
             ))
