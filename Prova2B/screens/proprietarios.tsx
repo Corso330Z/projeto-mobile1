@@ -58,7 +58,11 @@ const styles = StyleSheet.create({
   },
   card: {
     marginTop:10,
-    marginBottom: 10
+    marginBottom: 10,
+    fontSize: 24,
+    backgroundColor: "lightgray",
+    borderRadius: 25,
+    padding: 20
   },
   button: {
     marginTop:30,
