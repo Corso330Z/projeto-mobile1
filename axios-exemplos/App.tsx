@@ -1,0 +1,22 @@
+import { NavigationContainer } from "@react-navigation/native";
+import { createDrawerNavigator } from "@react-navigation/drawer";
+
+import HomeScreens from "./screens/home";
+import FazendasScreens from "./screens/fazendas";
+import ProprietariosScreens from "./screens/proprietarios";
+
+import Entypo from "@expo/vector-icons/Entypo";
+
+const Drawer = createDrawerNavigator();
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Drawer.Navigator>
+        <Drawer.Screen name="Home" component={HomeScreens} options={{drawerIcon:() => <Entypo name='home' size={24} color='black'/>}}/>
+        <Drawer.Screen name="Fazendas" component={FazendasScreens}/>
+        <Drawer.Screen name="Proprietarios" component={ProprietariosScreens}/>
+      </Drawer.Navigator>
+    </NavigationContainer>
+  );
+}
